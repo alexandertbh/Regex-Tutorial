@@ -35,13 +35,17 @@ Other examples of achors are the following:
 - \A: Checks only for the beginning of the string
 - \Z: Checks only for the end of the string
 
+In our email validation Regex we can see that the regex starts with an "^" after the first "\" which starts the expression. This means that is will be checking at the beginning of the string for something.
+
+`/^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/`
+
 ### Quantifiers
 
-Quanitifiers match the number of times that an indicated element appear in the string and can be shown a number of different ways. The easiert to start is the "+" quanitifier that simply means one or more times. This means if you have "a+" and then pass the string "banana" it will highlight each of the corresponding "a"'s. 
+Quanitifiers match the number of times that an indicated element appear in the string and can be shown a number of different ways. The easiert to start is the "+" quanitifier that simply means one or more times. This means if you have "a+" and then pass the string "banana" it will highlight each of the corresponding "a"'s.
 
-Other forms of quanitifiers are: 
+In our eamil validation expression we can see the "+" used two times to more one or more of the preceeding charations. This is done to in the first portion of the validation that is checking for the personal identifier of the email before the @ symbol and then again when checking for the domain name after the @ symbol later on.
 
-- ?: which means 
+`/^([a-z0-9_\.-]    +     )@([\da-z\.-]    +    )\.([a-z\.]{2,6})$/`
 
 ### Grouping Constructs
 
