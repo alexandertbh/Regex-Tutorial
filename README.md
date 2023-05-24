@@ -37,7 +37,11 @@ Other examples of achors are the following:
 
 ### Quantifiers
 
+Quanitifiers match the number of times that an indicated element appear in the string and can be shown a number of different ways. The easiert to start is the "+" quanitifier that simply means one or more times. This means if you have "a+" and then pass the string "banana" it will highlight each of the corresponding "a"'s. 
 
+Other forms of quanitifiers are: 
+
+- ?: which means 
 
 ### Grouping Constructs
 
