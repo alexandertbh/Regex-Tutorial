@@ -49,16 +49,36 @@ In our eamil validation expression we can see the "+" used two times to more one
 
 ### Grouping Constructs
 
+Grouping Constructs, as the name suggests, allows you to group a series of searches togther and include all of them at the same time. This is denoted using partasis with whatever is inside being what is included.
+
+In our example the parenthases followed by the square brackets show that we are looking for anthing lowercase in the alphabet "a-z". This is followed by "0-9" meaning any numbers can be included as well. Finally it ends with "\.-" which means that symbols are included. Normally the "." by iteself would mean symbols are included but since it is in a group ir needs to be seperated with a "\" and followed by a "-" in order for it to work.
+
 ### Bracket Expressions
+
+Brackets allow for the searching of ranges of of characters, numbers, or symbols. If you were to only do a parathese expression like (a-c) this would be essentially an OR statement for ever character show. Meaning "a" OR "-" OR "c". By braketing this same expression we turn this into a range to search through. Meaning "[a-c]" would equate to any character from "a" to "c" or in this case "a", "b", or "c".
+
+This specifically used in our email validation regex in order to search for all the lowercase alphat letter by using "[a-z]" and then also for all of the numbers 0-9 by adding "[0-9]", and finally by including all of the symbols with the added "[\.-]".
 
 ### Character Classes
 
+Character classes are buckets that letters, numbers, and symbols fall into that are enclosed within sqaure brackets. This allows you to search either ranges in total or specific sub sections of words. A good subsection example would be "b[aeo]nd". This means any string that starts with a "b" contains either an "a", "e", or "o", and ends with an "nd" would be selected. This would include the "band", "bend", or "bond".
+
+This is used for selecting the alphabet, numberic, and symbol ranges as explained above.
+
 ### The OR Operator
+
+This or opporator is a simply denoted as "|" and just means either or. So "(a|e)" would mean either "a" or "e" when doing a search. This is not particularly used in our regex example but is still good to know.
 
 ### Flags
 
+Flags can be added at the end of regex expression in order to change how it conducts its seach. The most common use cases are "g" meaning global or able to search through multi lines or "i" which allow for the search to be case insesitive. This is not used in our example either.
+
 ### Character Escapes
+
+Character escapes allow you to "escape" a specific search in order to add another search parameter. In our example when we want to find all of the symbols in the front half of our regex we would normally want to add a ".". However, since would be following seperate search it would take on a different meaning so we need to "escape" the search. This is done by adding "\" before whatever it is that you are wanting to search. By using this to escape the search and adding the ".-" after it we are able to search for all of possible symbols that could be added in the email.
 
 ## Author
 
-A short section about the author with a link to the author's GitHub profile (replace with your information and a link to your profile)
+Hi! I hope you enjoyed reading my brief article on regex expressions! My name is Alex Horning and I am a 2023 bootcamp grad from the UW FullStack Web Development Bootcamp. I was a Technical Recruiter that took a liking to all of the interesting things I saw my software Engineering Candidates doing and have wanted to learn more about coding and the art of creating things online in the digital age.
+
+If you would like to learn more feel free to check out my gihub profile at: https://github.com/alexandertbh
